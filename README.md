@@ -1,5 +1,5 @@
 <div align="center">
-    <img alt="Logo" src="https://github.com/DotVTech/dotvtech.github.io/blob/master/dist/images/logo-dark.png" width="100" />
+    <img alt="Logo" src="https://github.com/vdang7/vdang7.github.io/blob/master/dist/images/logo-dark.png" width="100" />
 </div>
 
 <h1 align="center">VietDang.me</h1>
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/DotVTech/dotvtech.github.io/master/dist/images/demo.png" alt="demo of portfolio website" />
+    <img src="https://raw.githubusercontent.com/vdang7/vdang7.github.io/master/dist/images/demo.png" alt="demo of portfolio website" />
 </p>    
 
 ## :open_file_folder: What's included
@@ -38,8 +38,8 @@ Be sure to have [Node.js](https://nodejs.org/) installed before proceeding.
 1. Clone the repo
 
     ```bash
-    git clone https://github.com/DotVTech/dotvtech.github.io
-    cd dotvtech.github.io
+    git clone https://github.com/vdang7/vdang7.github.io
+    cd vdang7.github.io
     ```
 
 2. Install dependencies
