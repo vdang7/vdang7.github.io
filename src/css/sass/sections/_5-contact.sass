@@ -1,0 +1,67 @@
+/* ===================================================
+ Base Styles
+ ================================================== */
+
+// Margins
+.contact
+    &__title
+        margin-top: 0.75rem
+
+// Contact
+.contact
+    &__container-text-group
+        text-align: center
+
+    &__subtitle
+        color: $color-accent
+
+    &__title
+        font-size: #{"min(max(0rem, 15vw), 7rem)"}
+        font-size: clamp(0rem, 15vw, 7rem)
+
+// Marquee
+@keyframes marquee-2
+    0% 
+        transform: translate3d(var(--move-initial), 0, 0)
+
+
+    100% 
+        transform: translate3d(var(--move-final), 0, 0)
+
+.marquee-2
+    position: relative
+    overflow: hidden
+    --offset: 20vw
+    --move-initial: calc(-25% + var(--offset))
+    --move-final: calc(-50% + var(--offset))
+
+.marquee-2 div
+    width: fit-content
+    display: flex
+    position: relative
+    white-space: nowrap
+    transform: translate3d(var(--move-initial), 0, 0)
+    animation: marquee-2 10s linear infinite
+
+.marquee-2 span 
+    padding: 0 2vw
+    text-transform: uppercase
+    font-weight: 700
+    background-image: linear-gradient(145deg,$color-accent-dark,$color-accent-medium 32%,$color-accent 74%,$color-secondary)
+    -webkit-background-clip: text
+    -webkit-text-stroke: 0.25rem transparent
+    color: $color-primary
+    
+.contact-button .button-arrow
+    width: 9px
+    height: 9px
+    margin-left:0.6rem
+    border-right-color: #fbcfe8
+    border-bottom-color: #fbcfe8
+
+.contact-button:hover .button-arrow::before 
+    background-color: #fbcfe8
+    width: 10px
+
+.contact-button:hover .button-arrow 
+    border-color: #fbcfe8

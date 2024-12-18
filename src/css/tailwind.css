@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'colors';
+
+:root {
+    --buttonPrimaryGradient: radial-gradient(
+        69.5% 69.5% at 50% 100%,
+        theme('colors.pink.200'),
+        rgba(138, 108, 255, 0) 87%
+    );
+}
+.tailwind-hidden {
+    display:none;
+}
+@media (hover: hover) {
+    body {
+        position: relative;
+    }
+
+    body::before {
+        background: radial-gradient(
+        2000px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(255, 255, 255, 0.08),
+        transparent 40%
+        ); 
+        border-radius: inherit;
+        content: "";
+        height: 100%;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        transition: opacity 500ms;
+        width: 100%;
+        pointer-events: none;
+        z-index: 999999;
+    }
+}
+  
+.button-arrow-parent > .button-arrow {
+    width: 7px;
+    height: 7px;
+    border-right: 2.2px solid theme('colors.black');
+    border-bottom: 2.2px solid theme('colors.black');
+    position: relative;
+    transform: rotate(-45deg);
+    margin-left: 6px;
+    transition: all .3s ease;
+}
+
+.button-arrow-parent > .button-arrow::before {
+    display: block;
+    background-color: theme('colors.black');
+    width: 3px;
+    transform-origin: bottom right;
+    height: 2px;
+    position: absolute;
+    opacity: 0;
+    bottom: calc(-2px / 2);
+    transform: rotate(45deg);
+    transition: all .3s ease;
+    content: "";
+    right: 0;
+}
+
+.button-arrow-parent:hover > .button-arrow {
+    transform: rotate(-45deg) translate(4px, 4px);
+    border-color: theme('colors.black');
+}
+
+.button-arrow-parent:hover > .button-arrow::before {
+    opacity: 1;
+    width: 8px;
+}
+
+.animated-underline {
+    position: relative;
+}
+
+.animated-underline::before,
+.animated-underline::after {
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+    right: 0;
+    height: 0.0625rem;
+    background-color: theme('colors.pink.300');
+    content: "";
+}
+
+.animated-underline::before {
+    opacity: 0.5;
+}
+
+.animated-underline::after {
+    transition: transform .3s cubic-bezier(.35,.755,.42,.95);
+    transform-origin: right center;
+    transform: scaleX(0);
+}
+
+.animated-underline:hover::after {
+    transform-origin: left center;
+    transform: scaleX(1);
+}
+
